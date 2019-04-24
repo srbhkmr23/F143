@@ -1,0 +1,40 @@
+
+<mat-dialog-content>
+        
+    <div> 
+        <form [formGroup]="updateItemForm" #formDir="ngForm" action=""  autocomplete="off">
+                <table>
+                    <tr>
+                        <td>Item Name:</td><td *ngIf ="isUpdateFalse">{{itemDetails.item_name}}</td><td *ngIf ="isUpdateTrue"><input type="text" trim formControlName="itemName" class="text_color" [(ngModel)]="itemName" placeholder="Item Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Qty:</td><td *ngIf ="isUpdateFalse">{{itemDetails.qty}}</td><td *ngIf ="isUpdateTrue"><input type="text" trim formControlName="Qty" class="text_color" [(ngModel)]="Qty" placeholder="Quantity"></td>
+                    </tr>
+                    <tr>
+                        <td>Price:</td><td *ngIf ="isUpdateFalse">{{itemDetails.price}}</td><td *ngIf ="isUpdateTrue"><input type="text" trim formControlName="Price" class="text_color" [(ngModel)]="Price" placeholder="Price"></td>
+                    </tr>
+                    <tr>
+                        <td>Purchase Date:</td><td *ngIf ="isUpdateFalse">{{itemDetails.purchase_date | date: 'dd/MM/yyyy'}}</td><td *ngIf ="isUpdateTrue"><input [owlDateTime]="dt1" class="text_color" formControlName="purchaseDate" [(ngModel)]="purchaseDate" [owlDateTimeTrigger]="dt1"  placeholder="Date Time">
+                            <owl-date-time #dt1></owl-date-time></td>
+                    </tr>
+                    <tr>
+                        <td>PurchasedBy:</td><td *ngIf ="isUpdateFalse">{{itemDetails.purchased_by}}</td><td *ngIf ="isUpdateTrue"><input type="text" class="text_color" trim formControlName="purchasedBy" [(ngModel)]="purchasedBy" placeholder="Purchased by"></td>
+                    </tr>
+                        
+                </table>
+        </form>
+        
+             
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <ng-container *ngIf = "isUpdateFalse">
+            <button (click) = "onUpdate()" class="mat-raised-button"><span class="glyphicon glyphicon-pencil"></span></button><button (click) = "onDelete()" class="mat-raised-button"><span class="glyphicon glyphicon-trash"></span></button><button class="mat-raised-button" (click)="close()"><span class="glyphicon glyphicon-remove"></span></button>
+    </ng-container>
+    <ng-container *ngIf = "isUpdateTrue">
+            <button (click) = "saveDetails()" style="margin: auto;" class="mat-raised-button">Save</button>
+    </ng-container>
+        
+</mat-dialog-actions>

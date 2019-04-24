@@ -1,0 +1,79 @@
+.custom-toaster-main-cls{
+  width:auto !important;
+}
+
+.custom-toaster-bg {
+  // font-family: 'sans-serif';
+  letter-spacing: 0;
+  background-color:#fff !important;
+  color: #263238;
+  font-size: 12px;
+  padding: 8px 30px 8px 42px !important;
+  min-height: 40px !important;
+  border-radius: 2px !important;
+  button {
+    color:black;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+  }
+}
+
+.error-cross-span {
+    background: #ea6d4b;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.success-check-span {
+    background: #12d292;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  animation-name: zoomOut;
+}
+
+.animate{
+  animation-duration: 800ms;
+}

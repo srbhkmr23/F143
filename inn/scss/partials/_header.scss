@@ -1,0 +1,51 @@
+header{
+  &.main-header{
+  .navbar{
+    border-radius: 0;
+  }
+  .navbar-inverse{
+    background-color: $bg-orange;
+    border-color:transparent;
+    margin-bottom: 0;
+  }  
+  .navbar-inverse{
+    .navbar-nav{
+      li{
+         &.active{
+          a{
+            background-color: #ce9b0e;
+            border-bottom:2px solid $white-color;
+          }
+
+        }
+
+         a{
+            padding-top: 35px;
+            padding-bottom: 35px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-bottom:2px solid transparent;
+            text-transform: uppercase;
+            color: $white-color;
+           &:hover,&:focus,&:active{
+             background-color: #ce9b0e;
+             border-bottom:2px solid $white-color;
+
+           }
+          }
+      }
+    }
+   
+  }
+}
+}
+
+ .isHome{
+  .navbar-inverse{
+    background-color: transparent !important;
+    border-color:transparent;
+  }
+   .navbar-collapse{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+ }

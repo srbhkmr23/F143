@@ -1,0 +1,117 @@
+.btn-arrow{
+  color: #000;
+  text-decoration: none !important;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 0px;
+  transform: translateX(-10px);
+  transition: all 0.2s ease-in-out;
+  .ico-r-arrow{
+     width: 15px;
+    height: 15px;
+  }
+}
+.btn-arrow{
+  &:hover{
+   .ico-r-arrow{
+    transform: translateX(5px);
+    transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.ico-close{
+  fill:#fff;
+}
+.btn-more{
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none !important;
+  color:#a9a9ab;
+  &:hover{
+    color:#a9a9ab;
+  }
+  .arrow{
+    padding: 3px;
+    border: solid #a9a9ab;
+  }
+}
+.cross_btn 
+{
+  .ico-cancle{
+    background-color: #2DB2DD;
+    border-radius: 50%;
+    padding: 6px;
+    height: 35px;
+    width: 35px;
+    svg{
+      fill:#fff;
+  
+    }
+ 
+  }
+}
+.ico-cancle {
+   fill:#2DB2DD; 
+}
+
+.ico-tag {
+   fill:#2DB2DD; 
+}
+.tag_yellow{
+  .ico-tag {
+   fill:#F9B408; 
+   }
+}
+.invit_address{
+  .ico-map-pin {
+    width:21px;
+    height: 21px;
+  }
+}
+
+
+
+.btn.btn-ublue {
+  background: $ublue;
+  color: $white-color;
+  font-size: 1.5em;
+  padding: 8px 20px;
+  border-radius: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+
+.btn.sign-btn{
+      border-radius: 20px;
+    font-size: 12px;
+    color: $white-color;
+    letter-spacing: 1px;
+    background: #797e82;
+    padding: 10px 20px;
+    svg{
+      fill:$white-color;
+    }
+}
+.btn.btn-rounded{
+  border-radius: 20px;
+    padding: 8px 30px;
+    background: transparent;
+    border-color: #000;
+    color: #000;
+}
+.o-border{
+  color: $bg-orange !important;
+  border:2px solid $bg-orange !important;
+}
+.btn-theme{
+  background:$bg-orange !important;
+  color: #fff !important;
+  border:1px solid $bg-orange !important;
+  svg{
+    fill:#fff;
+  }
+}
+

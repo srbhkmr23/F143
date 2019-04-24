@@ -1,0 +1,997 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "innovecsys Apis"
+host: "localhost:8582"
+basePath: "/api/v1"
+tags:
+- name: "Agenda Core Api"
+- name: "Category Core Apis"
+- name: "Event Core Apis"
+- name: "Speaker Core Apis"
+- name: "Sponsor Core Apis"
+- name: "User Core Apis"
+- name: "User Public Core Apis"
+schemes:
+- "http"
+- "https"
+paths:
+  /public/user:
+    get:
+      tags:
+      - "User Public Core Apis"
+      summary: "Search Event by keywords"
+      description: ""
+      operationId: "searchkeyword"
+      parameters:
+      - name: "keyword"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/EventResponse"
+        500:
+          description: "Failed"
+  /public/user/register:
+    post:
+      tags:
+      - "User Public Core Apis"
+      summary: "Create User"
+      description: ""
+      operationId: "registerUser"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/UserRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/agenda:
+    post:
+      tags:
+      - "Agenda Core Api"
+      summary: "Create Agenda"
+      description: ""
+      operationId: "createAgenda"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/ListOfAgendaRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+    delete:
+      tags:
+      - "Agenda Core Api"
+      summary: "Delete Agenda Details"
+      description: ""
+      operationId: "deleteDetails"
+      parameters:
+      - name: "detailsId"
+        in: "query"
+        required: true
+        type: "string"
+      - name: "agendaId"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/AgendaResponse"
+        500:
+          description: "Failed"
+  /user/agenda/detail:
+    delete:
+      tags:
+      - "Agenda Core Api"
+      summary: "Delete Agenda"
+      description: ""
+      operationId: "deleteAgenda"
+      parameters:
+      - name: "agendaId"
+        in: "query"
+        required: true
+        type: "string"
+      - name: "eventId"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/AgendaResponse"
+        500:
+          description: "Failed"
+  /user/agenda/ofevent/{eventId}:
+    get:
+      tags:
+      - "Agenda Core Api"
+      summary: "Get all Agendas of an event"
+      description: ""
+      operationId: "getAgnedasOfAnEvent"
+      parameters:
+      - name: "eventId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/AgendaResponse"
+        500:
+          description: "Failed"
+  /user/agenda/update/{agendaId}:
+    put:
+      tags:
+      - "Agenda Core Api"
+      summary: "Update Agenda"
+      description: ""
+      operationId: "updateAgenda"
+      parameters:
+      - name: "agendaId"
+        in: "path"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/AgendaRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/category:
+    get:
+      tags:
+      - "Category Core Apis"
+      summary: "Get All Category"
+      description: ""
+      operationId: "getAllCategory"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+    post:
+      tags:
+      - "Category Core Apis"
+      summary: "Create Category"
+      description: ""
+      operationId: "createCategory"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/ListOfCategoryRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/event:
+    get:
+      tags:
+      - "Event Core Apis"
+      summary: "Get all events by Date"
+      description: ""
+      operationId: "getEventsByDate"
+      parameters:
+      - name: "fromDate"
+        in: "query"
+        required: true
+        type: "string"
+      - name: "toDate"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/EventResponse"
+        500:
+          description: "Failed"
+    post:
+      tags:
+      - "Event Core Apis"
+      summary: "Create Event"
+      description: ""
+      operationId: "createEvent"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/EventRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+    delete:
+      tags:
+      - "Event Core Apis"
+      summary: "Delete an Event"
+      description: ""
+      operationId: "deleteEvent"
+      parameters:
+      - name: "userId"
+        in: "query"
+        required: true
+        type: "string"
+      - name: "eventId"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/event/all:
+    get:
+      tags:
+      - "Event Core Apis"
+      summary: "Get all Events of a manager"
+      description: ""
+      operationId: "getAllEventsOfAmanager"
+      parameters:
+      - name: "published"
+        in: "query"
+        required: true
+        type: "boolean"
+      - name: "userId"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/EventResponse"
+        500:
+          description: "Failed"
+  /user/event/publish/{eventId}:
+    put:
+      tags:
+      - "Event Core Apis"
+      summary: "Publish an Event"
+      description: ""
+      operationId: "publishEvent"
+      parameters:
+      - name: "eventId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/event/{id}:
+    put:
+      tags:
+      - "Event Core Apis"
+      summary: "Update Event"
+      description: ""
+      operationId: "updateEvent"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/EventRequest"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/speaker:
+    post:
+      tags:
+      - "Speaker Core Apis"
+      summary: "Create Speaker"
+      description: ""
+      operationId: "createSpeakerForEvent"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/ListOfSpeakerRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+    put:
+      tags:
+      - "Speaker Core Apis"
+      summary: "Set Speakers on event"
+      description: ""
+      operationId: "setSpeakersToEvent"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/ListOfSpeakerIdRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/SpeakerResponse"
+        500:
+          description: "Failed"
+  /user/speaker/all:
+    get:
+      tags:
+      - "Speaker Core Apis"
+      summary: "Get all Speakers"
+      description: ""
+      operationId: "getAllSpeakers"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/SpeakerResponse"
+        500:
+          description: "Failed"
+  /user/speaker/all/speakers/{eventId}:
+    get:
+      tags:
+      - "Speaker Core Apis"
+      summary: "Get all Speakers by event Id"
+      description: ""
+      operationId: "getAllSpeakersByEventId"
+      parameters:
+      - name: "eventId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/SpeakerResponse"
+        500:
+          description: "Failed"
+  /user/sponsor:
+    put:
+      tags:
+      - "Sponsor Core Apis"
+      summary: "Set sponsor on event: Pass list of ids in request body"
+      description: ""
+      operationId: "setSponserListforEvent"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/ListOfSponsorIdRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/sponsor/allsponsor:
+    get:
+      tags:
+      - "Sponsor Core Apis"
+      summary: "Get all sponsor"
+      description: ""
+      operationId: "getAllSponsor"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/SponsorResponse"
+        500:
+          description: "Failed"
+  /user/sponsor/delete/{sponsorId}:
+    delete:
+      tags:
+      - "Sponsor Core Apis"
+      summary: "Delete Sponsor by sponsorId"
+      description: ""
+      operationId: "deleteSponsorById"
+      parameters:
+      - name: "sponsorId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/sponsor/getlistbyalphabet/{alphabet}:
+    get:
+      tags:
+      - "Sponsor Core Apis"
+      summary: "Get list of Sponsors alphabetically"
+      description: ""
+      operationId: "getAlphabetWiseSponsorList"
+      parameters:
+      - name: "alphabet"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/sponsor/getrecentlyadded:
+    get:
+      tags:
+      - "Sponsor Core Apis"
+      summary: "Get recently added Sponsors"
+      description: ""
+      operationId: "getRecentlyAddedSponsors"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/sponsor/update/{sponsorId}:
+    put:
+      tags:
+      - "Sponsor Core Apis"
+      summary: "Update Sponsor"
+      description: ""
+      operationId: "updateSponsorById"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/SponsorRequest"
+      - name: "sponsorId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/sponsor/{eventId}:
+    get:
+      tags:
+      - "Sponsor Core Apis"
+      summary: "Get sponsor by event Id"
+      description: ""
+      operationId: "getSponsorListByEventId"
+      parameters:
+      - name: "eventId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+    post:
+      tags:
+      - "Sponsor Core Apis"
+      summary: "Create Sponsor"
+      description: ""
+      operationId: "createSponsorForEvent"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/ListOfSponsorRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+  /user/types:
+    get:
+      tags:
+      - "User Core Apis"
+      summary: "Get User Types"
+      description: ""
+      operationId: "getUserTypes"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/BaseResponse"
+        500:
+          description: "Failed"
+definitions:
+  AddressRequest:
+    type: "object"
+    properties:
+      detailedLocation:
+        type: "string"
+      city:
+        type: "string"
+      state:
+        type: "string"
+      country:
+        type: "string"
+      latitude:
+        type: "string"
+      longitude:
+        type: "string"
+  AddressResponse:
+    type: "object"
+    properties:
+      detailedLocation:
+        type: "string"
+      city:
+        type: "string"
+      state:
+        type: "string"
+      country:
+        type: "string"
+      latitude:
+        type: "string"
+      longitude:
+        type: "string"
+      createdTimestamp:
+        type: "integer"
+        format: "int64"
+      lastModifiedTimestamp:
+        type: "integer"
+        format: "int64"
+  AgendaDetailResponse:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      speakerResponse:
+        $ref: "#/definitions/SpeakerResponse"
+      description:
+        type: "string"
+      startTimestamp:
+        type: "integer"
+        format: "int64"
+      endTimestamp:
+        type: "integer"
+        format: "int64"
+  AgendaDetailsRequest:
+    type: "object"
+    properties:
+      speakerId:
+        type: "string"
+      description:
+        type: "string"
+      startTimestamp:
+        type: "string"
+        format: "date-time"
+      endTimestamp:
+        type: "string"
+        format: "date-time"
+  AgendaRequest:
+    type: "object"
+    properties:
+      agendaTitle:
+        type: "string"
+      startTimestamp:
+        type: "string"
+        format: "date-time"
+      endTimestamp:
+        type: "string"
+        format: "date-time"
+      eventAgendaDetailsRequest:
+        type: "array"
+        items:
+          $ref: "#/definitions/AgendaDetailsRequest"
+      eventId:
+        type: "string"
+  AgendaResponse:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      agendaTitle:
+        type: "string"
+      startTimestamp:
+        type: "integer"
+        format: "int64"
+      endTimestamp:
+        type: "integer"
+        format: "int64"
+      agendaDetailsResponse:
+        type: "array"
+        items:
+          $ref: "#/definitions/AgendaDetailResponse"
+      createdTimestamp:
+        type: "integer"
+        format: "int64"
+      lastModifiedTimestamp:
+        type: "integer"
+        format: "int64"
+  BaseResponse:
+    type: "object"
+    properties:
+      status:
+        type: "integer"
+        format: "int32"
+      responseMessage:
+        type: "string"
+      resourceData:
+        type: "object"
+      customMessage:
+        type: "string"
+      resourceId:
+        type: "string"
+  CategoryRequest:
+    type: "object"
+    properties:
+      categoryName:
+        type: "string"
+      createdTimeStamp:
+        type: "string"
+        format: "date-time"
+      lastModifiedTimeStamp:
+        type: "string"
+        format: "date-time"
+      subCategoryRequests:
+        type: "array"
+        items:
+          $ref: "#/definitions/SubCategoryRequest"
+  EventRequest:
+    type: "object"
+    properties:
+      createrUserId:
+        type: "string"
+      eventName:
+        type: "string"
+      eventCategory:
+        type: "string"
+      startTimestamp:
+        type: "string"
+        format: "date-time"
+      endTimestamp:
+        type: "string"
+        format: "date-time"
+      venue:
+        type: "string"
+      timeZone:
+        type: "string"
+      duration:
+        type: "string"
+      fees:
+        type: "string"
+      description:
+        type: "string"
+      address:
+        $ref: "#/definitions/AddressRequest"
+      sponsorsList:
+        type: "array"
+        items:
+          $ref: "#/definitions/SponsorRequest"
+      speakersList:
+        type: "array"
+        items:
+          $ref: "#/definitions/SpeakerRequest"
+      bannerImageURL:
+        type: "string"
+      mediaImageURLs:
+        type: "array"
+        items:
+          type: "string"
+  EventResponse:
+    type: "object"
+    properties:
+      eventId:
+        type: "string"
+      createdByUserId:
+        type: "string"
+      eventName:
+        type: "string"
+      startTimestamp:
+        type: "integer"
+        format: "int64"
+      endTimestamp:
+        type: "integer"
+        format: "int64"
+      venue:
+        type: "string"
+      timeZone:
+        type: "string"
+      duration:
+        type: "string"
+      fees:
+        type: "string"
+      description:
+        type: "string"
+      address:
+        $ref: "#/definitions/AddressResponse"
+      sponsorsList:
+        type: "array"
+        items:
+          $ref: "#/definitions/SponsorResponse"
+      speakersList:
+        type: "array"
+        items:
+          $ref: "#/definitions/SpeakerResponse"
+      createdTimestamp:
+        type: "integer"
+        format: "int64"
+      lastModifiedTimestamp:
+        type: "integer"
+        format: "int64"
+      bannerImageURL:
+        type: "string"
+      mediaImageURLs:
+        type: "array"
+        items:
+          type: "string"
+      published:
+        type: "boolean"
+        default: false
+  GenericIdAndNameRequest:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      name:
+        type: "string"
+      innerListOfNameAndId:
+        type: "array"
+        items:
+          $ref: "#/definitions/GenericIdAndNameRequest"
+  ListOfAgendaRequest:
+    type: "object"
+    properties:
+      requestList:
+        type: "array"
+        items:
+          $ref: "#/definitions/AgendaRequest"
+      eventId:
+        type: "string"
+  ListOfCategoryRequest:
+    type: "object"
+    properties:
+      creatorUserId:
+        type: "string"
+      listOfCategory:
+        type: "array"
+        items:
+          $ref: "#/definitions/CategoryRequest"
+  ListOfSpeakerIdRequest:
+    type: "object"
+    properties:
+      speakerIds:
+        type: "array"
+        items:
+          type: "string"
+      eventId:
+        type: "string"
+  ListOfSpeakerRequest:
+    type: "object"
+    properties:
+      speakerRequests:
+        type: "array"
+        items:
+          $ref: "#/definitions/SpeakerRequest"
+      createrUserId:
+        type: "string"
+  ListOfSponsorIdRequest:
+    type: "object"
+    properties:
+      sponsorIds:
+        type: "array"
+        items:
+          type: "string"
+      eventId:
+        type: "string"
+  ListOfSponsorRequest:
+    type: "object"
+    properties:
+      createrUserId:
+        type: "string"
+      sponsorRequests:
+        type: "array"
+        items:
+          $ref: "#/definitions/SponsorRequest"
+  SpeakerRequest:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      position:
+        type: "string"
+      company:
+        type: "string"
+      about:
+        type: "string"
+      rating:
+        type: "number"
+        format: "double"
+      createrUserId:
+        type: "string"
+      imageURL:
+        type: "string"
+  SpeakerResponse:
+    type: "object"
+    properties:
+      speakerId:
+        type: "string"
+      name:
+        type: "string"
+      position:
+        type: "string"
+      company:
+        type: "string"
+      about:
+        type: "string"
+      rating:
+        type: "number"
+        format: "double"
+      createdTimeStamp:
+        type: "integer"
+        format: "int64"
+      lastModifiedTimeStamp:
+        type: "integer"
+        format: "int64"
+      imageURL:
+        type: "string"
+  SponsorRequest:
+    type: "object"
+    properties:
+      sponserName:
+        type: "string"
+      webSiteLink:
+        type: "string"
+      about:
+        type: "string"
+      imageURL:
+        type: "string"
+  SponsorResponse:
+    type: "object"
+    properties:
+      sponsorId:
+        type: "string"
+      sponserName:
+        type: "string"
+      webSiteLink:
+        type: "string"
+      about:
+        type: "string"
+      imageURL:
+        type: "string"
+      createdTimestamp:
+        type: "integer"
+        format: "int64"
+      lastUpdated:
+        type: "integer"
+        format: "int64"
+  SubCategoryRequest:
+    type: "object"
+    properties:
+      subCategoryName:
+        type: "string"
+      createdTimeStamp:
+        type: "string"
+        format: "date-time"
+      lastModifiedTimeStamp:
+        type: "string"
+        format: "date-time"
+  UserRequest:
+    type: "object"
+    required:
+    - "userTypeId"
+    properties:
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+      email:
+        type: "string"
+      userName:
+        type: "string"
+      oldPassword:
+        type: "string"
+      password:
+        type: "string"
+      coverPhotoId:
+        type: "string"
+      profilePhotoId:
+        type: "string"
+      mobile:
+        type: "string"
+      profession:
+        type: "array"
+        uniqueItems: true
+        items:
+          type: "string"
+      organization:
+        type: "string"
+      dateOfBirth:
+        type: "string"
+        format: "date-time"
+      gender:
+        type: "string"
+      companyId:
+        type: "string"
+      userTypeId:
+        type: "integer"
+        format: "int32"
+      addressRequest:
+        $ref: "#/definitions/AddressRequest"
+      listOfCategoryId:
+        type: "array"
+        items:
+          $ref: "#/definitions/GenericIdAndNameRequest"

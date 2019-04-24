@@ -1,0 +1,407 @@
+.loginPageCustom .splitlayout {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100%;
+  width: 100%;
+  background-color: #273238;
+}
+
+/* Intro sides */
+.loginPageCustom .side {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+}
+
+.loginPageCustom .open-left .side,
+.loginPageCustom .open-right .side {
+  cursor: default;
+}
+
+.loginPageCustom .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 499;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.loginPageCustom .side-left .overlay {
+  background: #273238;
+}
+
+.loginPageCustom .side-right .overlay {
+  background: #273238;
+}
+
+.loginPageCustom .side-left {
+  left: 0;
+  /* background: #47a3da;
+    color: #fff;*/
+  outline: 1px solid #47a3da; /* avoid gap */
+}
+
+.loginPageCustom .side-right {
+  right: 0;
+  /* background: #fff;
+    color: #47a3da;*/
+  outline: 1px solid #fff; /* avoid gap */
+}
+
+.loginPageCustom .back {
+  position: fixed;
+  top: 2.6em;
+  z-index: 500;
+  display: block;
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #47a3da;
+  text-align: center;
+  font-size: 22px;
+  line-height: 44px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loginPageCustom .mobile-layout .back {
+  /* fixed positioning will make this not clickable after scrolling on some mobile devices */
+  position: absolute;
+}
+
+.loginPageCustom .back-left {
+  left: 12.5%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.loginPageCustom .back-right {
+  right: 12.5%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  color: #fff;
+}
+
+.loginPageCustom .open-right .back-left,
+.loginPageCustom .open-left .back-right {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  pointer-events: auto;
+}
+
+.loginPageCustom .back:hover {
+  color: #ddd;
+}
+
+/* Pages */
+.loginPageCustom .page {
+  position: relative;
+  top: 0;
+  overflow: auto;
+  min-height: 100%;
+  /* width: 55%; */
+  width: 56%;
+  height: auto;
+  font-size: 1.4em;
+  -webkit-backface-visibility: hidden;
+}
+
+.loginPageCustom .page-right {
+  left: 25%;
+  outline: 5px solid #ecf0f1; /* avoid rounding gaps */
+  background: #273238;
+  color: #97a8b2;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.loginPageCustom .page-left {
+  left: 0;
+  outline: 5px solid #34495e; /* avoid rounding gaps */
+  background: #273238;
+  color: #fff;
+  text-align: right;
+  -webkit-transform: translateX(-75%) scale(0.6);
+  transform: translateX(-75%) scale(0.6);
+  height: 100vh !important;
+  z-index: 10;
+}
+
+/* Inner page content */
+.loginPageCustom .page-inner {
+  padding: 2em;
+}
+
+.loginPageCustom .page-inner section {
+  padding-bottom: 1em;
+}
+
+.loginPageCustom .page-inner h2 {
+  margin: 0 0 1em 0;
+  font-weight: 300;
+  font-size: 2.4em;
+}
+
+.loginPageCustom .page-inner p {
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+/* All transitions */
+.loginPageCustom .side,
+.loginPageCustom .page {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+.loginPageCustom .overlay {
+  -webkit-transition: opacity 0.5s ease-in-out, visibility 0.1s 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, visibility 0.1s 0.5s ease-in-out;
+}
+
+.loginPageCustom .intro-content {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out, top 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
+}
+
+.loginPageCustom .intro-content h1,
+.loginPageCustom .back {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Open and close */
+
+/* We need to set the position and overflow for the respective page scroll */
+.loginPageCustom .reset-layout .page,
+.loginPageCustom .splitlayout.open-right .page-left,
+.loginPageCustom .splitlayout.open-left .page-right,
+.loginPageCustom .splitlayout.close-right .page-left,
+.loginPageCustom .splitlayout.close-left .page-right {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+}
+
+.loginPageCustom .splitlayout .text-details {
+  margin-left: 175px;
+  transition: all 0.5s;
+}
+
+.loginPageCustom .splitlayout .login .logo {
+  transition: all 0.5s;
+  left: 55px;
+}
+
+.loginPageCustom .splitlayout.open-left .text-details {
+  margin-left: 0;
+}
+
+.loginPageCustom .splitlayout.open-left .login .logo {
+  opacity: 0;
+  left: 200px;
+}
+
+.loginPageCustom .signup .formField-content {
+  width: 100%;
+}
+
+.loginPageCustom .splitlayout.open-right .page-right,
+.loginPageCustom .splitlayout.open-left .page-left {
+  position: relative;
+  overflow: auto;
+  height: auto;
+}
+
+.loginPageCustom .open-right .side-left .overlay,
+.loginPageCustom .open-left .side-right .overlay {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Right side open */
+.loginPageCustom .open-right .side-left {
+  -webkit-transform: translateX(-60%) scale(0.5);
+  transform: translateX(-60%) scale(0.5);
+}
+
+.loginPageCustom .open-right .side-right {
+  z-index: 200;
+  -webkit-transform: translateX(-150%);
+  transform: translateX(-150%);
+}
+
+.loginPageCustom .close-right .side-right {
+  z-index: 200;
+}
+
+.loginPageCustom .open-right .side-right .intro-content {
+  -webkit-transform: translateY(-50%) translateX(0%) scale(0.6);
+  transform: translateY(-50%) translateX(0%) scale(0.6);
+}
+
+.loginPageCustom .open-right .page-right {
+  -webkit-transform: translateX(0%) scale(1);
+  transform: translateX(0%) scale(1);
+}
+
+/* Left side open */
+.loginPageCustom .open-left .side-right {
+  -webkit-transform: translateX(60%) scale(0.5);
+  transform: translateX(60%) scale(0.5);
+}
+
+.loginPageCustom .open-left .side-left {
+  z-index: 200;
+  -webkit-transform: translateX(123%);
+  transform: translateX(123%);
+}
+
+.loginPageCustom .close-left .side-left {
+  z-index: 200;
+}
+
+.loginPageCustom .open-left .side-left .intro-content {
+  -webkit-transform: translateY(-50%) translateX(-100%) scale(0.6);
+  transform: translateY(-50%) translateX(-100%) scale(0.6);
+}
+
+.loginPageCustom .open-left .codropsheader {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0.1s 0.3s;
+  transition: opacity 0.3s, visibility 0.1s 0.3s;
+}
+
+.loginPageCustom .open-left .page-left {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+/* Media Queries */
+@media screen and (max-width: 83em) {
+  .loginPageCustom .intro-content {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 58em) {
+  body {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 49.4375em) {
+  .loginPageCustom .open-right .side-right {
+    -webkit-transform: translateX(-175%);
+    transform: translateX(-175%);
+  }
+
+  .loginPageCustom .open-right .side-left {
+    -webkit-transform: translateX(-100%) scale(0.7);
+    transform: translateX(-100%) scale(0.7);
+  }
+
+  .loginPageCustom .open-left .side-right {
+    -webkit-transform: translateX(100%) scale(0.7);
+    transform: translateX(100%) scale(0.7);
+  }
+
+  .loginPageCustom .open-left .side-left {
+    /* -webkit-transform: translateX(175%);
+    transform: translateX(175%); */
+    /* transform: translateX(0%); */
+    max-width: 56%;
+  }
+
+  .loginPageCustom .page {
+    width: 100%;
+  }
+
+  .loginPageCustom .page-right {
+    left: 0;
+    padding-left: 15%;
+  }
+
+  .loginPageCustom .page-left {
+    /* padding-right: 15%; */
+  }
+
+  .loginPageCustom .intro-content {
+    width: 100%;
+  }
+
+  .loginPageCustom .open-right .side-right .intro-content {
+    top: 100%;
+    -webkit-transform: translateY(-150px) translateX(-12.5%) scale(0.5);
+    transform: translateY(-150px) translateX(-12.5%) scale(0.5);
+  }
+
+  .loginPageCustom .open-left .side-left .intro-content {
+    top: 100%;
+    -webkit-transform: translateY(-150px) translateX(-87.5%) scale(0.5);
+    transform: translateY(-150px) translateX(-87.5%) scale(0.5);
+  }
+
+  .loginPageCustom .open-right .intro-content h1,
+  .loginPageCustom .open-left .intro-content h1 {
+    opacity: 0;
+  }
+
+  .loginPageCustom .back-left {
+    left: 6.25%;
+  }
+
+  .loginPageCustom .back-right {
+    right: 6.25%;
+  }
+}
+
+/*  @media screen and (max-width: 42.5em) {
+    body { font-size: 80%; }
+    .intro-content { font-size: 50%; }
+  }
+
+  @media screen and (max-height: 41.125em) {
+    .intro-content {
+      -webkit-transform: translateY(-25%) translateX(-50%);
+      transform: translateY(-25%) translateX(-50%);
+    }
+  }
+
+  @media screen and (max-width: 39.375em) {
+    .intro-content .profile { -webkit-transform: scale(0.5); transform: scale(0.5); }
+}*/
+
+@media only screen and (max-width: 1191px) {
+  .loginPageCustom .splitlayout .text-details {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .loginPageCustom .splitlayout .login .logo {
+    left: 10px;
+  }
+  .loginPageCustom .splitlayout .text-details {
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .loginPageCustom .info-content {
+    display: none;
+  }
+  .loginPageCustom .open-left .side-left {
+    max-width: 100%;
+  }
+}

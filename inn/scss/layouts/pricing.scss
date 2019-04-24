@@ -1,0 +1,227 @@
+
+/*================ Plans And Purchased Scss ===============*/ 
+.bg-dark {
+	background: #273238;
+}
+.mh-100 {
+	min-height: 100%;
+}
+.price-heading {
+	//padding:0px 0px 30px;
+	.pricingTitle {
+		font-size: 28px;
+		font-weight: 400;
+		color: #fff;
+		margin-bottom: 10px;
+	}
+	p {
+		font-size: 1.5em;
+		color: #b8b8b8;
+	}
+}
+
+.planPricingSec {
+	padding-top: 12%;
+	.pricingWrapper {
+		padding: 0 10%;
+		.col-sm-4 {
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+		.planPriceCard {
+			position: relative;
+			background: #fff;
+			padding: 30px 0;
+			min-height: 450px;
+			//overflow: hidden;
+			&:hover {
+				background: #edae0e;
+				.footer-btn {
+					padding: 0px 0px;
+					.btn-dark {
+						border-radius: 0px 50px 50px 0;
+						padding: 10px 40px;
+						background: transparent;
+						border-color: #273238 !important;
+						color: #273238 !important;
+						border-width: 2px 2px 2px 0 !important;
+						outline: 0;
+						&:hover, &:focus {
+							background: #273238 !important;
+							color: #fff !important;
+						}
+					}
+				}
+			}
+			.plan-header{
+				padding: 0px 25px 10px 25px;
+				border-bottom: 1px solid;
+				h2 {
+					font-weight: 500;
+					font-size: 32px;
+					margin-bottom: 0;
+				}
+			}
+			.price {
+				padding: 0px 20px 0px 20px;
+				position: relative;
+				span{
+					&:nth-child(1){
+						font-size:18px;
+						position: absolute;
+						margin-top: 18px;
+					}
+					&:nth-child(2){
+						font-size: 4.5em;
+						margin-left: 10px;
+					}
+					&:nth-child(3){
+						font-size:18px;
+					}
+				}
+			}
+			.planDetails {
+				padding:0px 20px 15px 20px;
+				.planOffers {
+					position: relative;
+					padding: 0px 0px 0px 25px;
+					.ico-rightplanPurchase{
+						position: absolute;
+						top: -2px;
+						left: 0;
+						width:20px;
+						height:25px;
+						svg {
+							fill:#000;
+							width:100%;
+							height:100%;
+						}
+					}
+				}
+			}
+			.selectPlan {
+				padding: 0px 20px 20px 20px;
+				span {
+					width: 95px;
+					display: inline-block;
+					.radio-custom {
+						opacity: 0;
+						position: absolute;
+						}
+						
+						.radio-custom-label {
+						position: relative;
+						font-weight: normal;
+						font-size: 13px;
+						}
+						
+						.radio-custom, .radio-custom-label {
+						display: inline-block;
+						vertical-align: middle;
+						margin: 5px;
+						cursor: pointer;
+						}
+						
+						.radio-custom {
+						+ .radio-custom-label:before {
+							content: '';
+							background: transparent;
+							border: 2px solid #273238;
+							display: inline-block;
+							vertical-align: middle;
+							width: 18px;
+							height: 18px;
+							padding: 2px;
+							margin-right: 5px;
+							text-align: center;
+							border-radius: 50%;
+							margin-bottom: 2px;
+						}
+						&:checked + .radio-custom-label:before {
+							background: #273238;
+							box-shadow: inset 0px 0px 0px 0px #273238;
+						}
+						&:focus + .radio-custom-label {
+							/*outline: 1px solid #ddd;*/
+							/* focus style */
+						}
+					}
+				}
+			}
+
+			// &.active {
+			// 	//transform:scaleY(1.15);
+			// 	background:$bg-orange;
+			// 	// .planPriceCard {
+			// 	// 	background:$bg-orange;
+			// 	// }
+			// 	.btn.btn-rounded{
+			// 		transform:scaleY(.9);
+			// 	}
+			// 	.footer-btn {
+			// 		padding: 0px 0px;
+			// 		.btn-dark {
+			// 			border-radius: 0px 50px 50px 0;
+			// 			padding: 10px 40px;
+			// 			background: transparent;
+			// 			border-color: #273238 !important;
+			// 			color: #273238 !important;
+			// 			border-width: 2px 2px 2px 0 !important;
+			// 			outline: 0;
+			// 			&:hover, &:focus {
+			// 				background: #273238 !important;
+			// 				color: #fff !important;
+			// 			}
+			// 		}
+			// 	}
+			// }
+		}
+
+		.footer-btn {
+			padding: 0px 0px;
+			position: absolute;
+			bottom: 38px;
+			.btn-dark {
+				position: static;
+				border-width: 2px 2px 2px 0 !important;
+				padding: 10px 40px;
+				border-radius: 0px 50px 50px 0;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+/*==============  Media Query ===========*/ 
+@media only screen and (max-width: 1366px) {
+	.planPricingSec {
+		padding: 10% 0 20px 0;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.planPricingSec {
+		padding-top: 15%;
+		.pricingWrapper { 
+			padding: 0px 0px;
+			.price {
+				span:nth-child(2) {
+					font-size: 4em !important;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.planPricingSec {
+		padding-top: 25%;
+		.pricingWrapper { 
+			padding: 0px 0px;
+			.planPriceCard {
+				&.active {
+					margin-top: 25px;
+				}
+			}
+		}
+	}
+}

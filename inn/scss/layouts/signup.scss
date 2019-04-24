@@ -1,0 +1,195 @@
+.darkContainer{
+	background: $bg-dark;
+	height:100vh;
+	position:relative;
+}
+.rowBox{
+	@include flexbox();
+	position:relative;
+	width: 100%;
+    height: 100%;
+	.colBox{
+		flex:1;
+		flex-basis: 50%;
+	}
+} 
+.sMainOverlay{
+	position:absolute;
+	width: 100%;
+	height:100%;
+	background:url("../img/banner.png")no-repeat;
+	background-size: cover;
+	background-position: center center;
+	&:before{
+		content: "";
+		position: absolute;
+		background:$bg-orange;
+		opacity: 0.9;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;	
+	}
+
+}
+.textContainer{
+	max-width: 70%;
+    margin-left: auto;
+    padding: 20px 50px 20px 50px;
+	.logoSpace{
+		margin-bottom: 50px;
+	}
+	h2{
+		font-size: 3em;
+	}
+	p{
+		font-size: 1.4em;
+	}
+}
+.darkContainer .sMainOverlay{
+	width:45%
+}
+.formBox{
+	@include flexbox;
+	@include align-items(center);
+	height:100%;
+	.lfWidth{
+		flex: 1;
+	}
+}
+
+
+.align-btn{
+	margin:30px 0;
+}
+.f-micro{
+	font-size: 11px;
+    color: #8d989e;
+    display: inline-block;
+    text-decoration: none !important;
+    &:hover{
+    	color: #8d989e;
+    }
+}
+.w-sBox{
+	max-width:50%;
+}
+.fadeInLeft{
+
+	.darkContainer{
+		.sMainOverlay{
+			right: 0;
+		}
+		
+			.s-l{
+				order:1;
+				
+				.w-sBox{
+					margin-left: auto;
+					max-width: 75%;
+				}
+			}
+			.s-r{
+				order: 2;
+				
+				.textContainer{
+					margin-left: 0;
+				}
+			}
+		
+	} 
+}
+
+.mr5{		
+	margin-right: 5px;
+}
+
+
+	  /* for laptop view 1366 */
+  
+@media only screen and (max-width: 1366px) {
+    .text-details h2 {font-size: 2.3em;}
+    .text-details p {font-size: 1.2em;}
+    .formField-content {padding: 100px 50px 20px 50px;}
+    //.form-panel .form-group {padding: 6px 35px 6px 45px;}
+    .footer-btn {padding: 0px 0 35px;}
+    .footer-btn .btn-dark {padding: 11px 70px;}
+    .social-div {margin-top: 5%;}
+    .social li a i {
+        height: 35px;
+        width: 35px;
+        font-size: 15px;
+        line-height: 35px;
+    }
+ }
+
+
+
+/*============== Reset Password Scss ===========*/  
+.resetPassword-Sec {
+	background: url(../../src/img/unsubscribeBgImg.jpg) no-repeat center;
+    background-size: cover;
+	height: 100%;
+	.rPwdContent {
+		border-radius: 0px;
+		background: #fff;
+		padding: 40px 30px 30px;
+		max-width: 530px;
+		margin: 0 auto;
+		box-shadow: 0px 5px 10px #ccc;
+		.title{
+            font-size: 16px;
+            font-weight: 500;
+            padding: 0px 0px;
+        }
+        .resetText {
+            color: #939596;
+        }
+        .form-card {
+            .form-group {
+                span {
+                    position: absolute;
+                    top: 18px;
+                    left: 11px;
+                    width: 22px;
+                    height: 22px;
+                    z-index: 1;
+                    svg {
+                        fill:#edae0e;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .form-control {
+                    padding: 20px 40px 20px 40px !important;
+                }
+            }
+		}
+		.rpass-footer {
+			padding: 0px 15px;
+			.btnSubmit {
+				background: #edae0e;
+				border: 0;
+				border-radius: 20px;
+				color: #fff;
+				padding: 7px 20px;
+				min-width: 85px;
+				&:hover {
+					background: #dc9f02;
+				}
+			}
+			.btnCancel {
+				padding: 7px 20px;
+				border-radius: 20px;
+				min-width: 85px;
+			}
+		}
+        .securityImg {
+            margin-top: 35px;
+            img {
+				width:100%;
+				max-width: 200px;
+            }
+        }
+	}
+}

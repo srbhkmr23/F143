@@ -1,0 +1,189 @@
+.mj-checkbox {
+  display: inline-block;
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked)+label,
+  [type="checkbox"]:checked+label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+  }
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0; // border: 2px solid #ccc;
+    // background: #fff;
+    // border-radius: 4px;
+    // box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+    width: 25px;
+    height: 25px;
+    // background: url(../img/unchecked.svg) no-repeat center -7px;
+    display: block;
+    background-size: 35px;
+  }
+  [type="checkbox"]:checked+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0; // border: 2px solid #ccc;
+    // background: #fff;
+    // border-radius: 4px;
+    // box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+    width: 25px;
+    height: 25px;
+    // background: url(../img/checked.svg) no-repeat center -7px;
+    display: block;
+    background-size: 35px;
+  }
+  &.checkbox-yellow {
+    /* checkbox aspect */
+    label {
+      color: $uyellow!important;
+    }
+    [type="checkbox"]:not(:checked)+label:before {
+      // background: url(../img/unchecked-yellow.svg) no-repeat center -7px;
+      background-size: 35px;
+    }
+    [type="checkbox"]:checked+label:before {
+      // background: url(../img/checked-yellow.svg) no-repeat center -7px;
+      background-size: 35px;
+    }
+  }
+  &.checkbox-blue {
+    /* checkbox aspect */
+    label {
+      color: $light-blue!important;
+    }
+    [type="checkbox"]:not(:checked)+label:before {
+      // background: url(../img/unchecked-blue.svg) no-repeat center -7px;
+      background-size: 35px;
+    }
+    [type="checkbox"]:checked+label:before {
+      // background: url(../img/checked-blue.svg) no-repeat center -7px;
+      background-size: 35px;
+    }
+  }
+} //mj-checkbox ends
+.searchbar {
+  input {
+    outline: none;
+  }
+  input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+  }
+  input::-webkit-search-decoration,
+  input::-webkit-search-cancel-button {
+    display: none;
+  }
+  input[type=search] {
+    background: #fff url(/img/search.svg) no-repeat left center;
+    background-size: 45px;
+    width: 150px;
+    height: 38px; // border: solid 1px #ccc;
+    border: 1px solid #d3d3d3; // padding: 9px 10px 9px 32px;
+    // width: 55px;
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    background-size:30px 30px;
+
+  }
+  input[type=search]:focus {
+    // width: 130px;
+    background-color: #fff;
+    border-color: #ddd;
+    -webkit-box-shadow: 0 0 1px rgba(11, 36, 54, 0.25);
+    -moz-box-shadow: 0 0 1px rgba(11, 36, 54, 0.25);
+    box-shadow: 0 0 1px rgba(11, 36, 54, 0.25);
+  }
+  input:-moz-placeholder {
+    color: #999;
+  }
+  input::-webkit-input-placeholder {
+    color: #999;
+  }
+  /* Demo 2 */
+  input[type=search] {
+    // width: 15px;
+    padding-left: 10px;
+    color: transparent;
+    cursor: pointer;
+    font-size: 1.25em; // color: $label-gray;
+     padding-left: 30px;
+  }
+  input[type=search]:hover {
+    background-color: #fff;
+  }
+  input[type=search]:focus {
+    // width: 230px;
+    // padding-left: 45px;
+    color: $label-gray;
+    background-color: #fff;
+    cursor: auto;
+  }
+  // input:-moz-placeholder {
+  //   color: transparent;
+  // }
+  // input::-webkit-input-placeholder {
+  //   color: transparent;
+  // }
+}
+
+// custom uploader
+.uupload {
+  .ico-upload {
+    width: 20px;
+    height: 20px;
+    // margin-right: 5px;
+    svg {
+      fill: $light-blue;
+    }
+  }
+  label {
+    cursor: pointer;
+    color: $light-blue;
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+}
+
+// login form icon
+.inputIco-email {
+  background: #fff url(/img/username.svg) no-repeat 20px 16px;
+  background-size: 25px;
+}
+
+.inputIco-password {
+  background: #fff url(/img/password.svg) no-repeat 15px 16px;
+  background-size: 25px;
+}
+
+select.form-control {
+  background: url(/img/dropdown.svg) no-repeat;
+  background-position: right 5px center;
+  background-size: 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.form-control.mj-control {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1.5em;
+  min-height: 40px;
+  border: 1px solid #d3d3d3;
+}

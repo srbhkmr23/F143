@@ -1,0 +1,118 @@
+/*============== CAROUSEL STYLE =================*/ 
+.agendaTimeline {
+    padding: 15px 20px;
+    .agendaHeader {
+        height: 80px;
+        background: #f2f2f2;
+        padding: 10px 35px !important;
+        border: 1px solid #dbdcdc;
+        position: relative;
+        .dateTabs {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0;
+            li {
+                display: inline-block;
+                min-width: 122px;
+                a {
+                    display: inline-block;
+                    text-align: center;
+                    text-decoration: none;
+                    background: transparent;
+                    padding: 10px 10px;
+                    height: 57px;
+                    position: relative;
+                    // &:before {
+                    //     border-color: transparent transparent #263238 ;
+                    // }
+                    // &:after {
+                    //     margin-top: 1px;
+                    //     border-color: transparent transparent #fff ;
+                    // }
+                    // &:after, &:before {
+                    //     content: "";
+                    //     border-style: solid;
+                    //     border-width: 10px;
+                    //     width: 0;
+                    //     height: 0;
+                    //     position: absolute;
+                    //     left: 0;
+                    //     right: 0;
+                    //     bottom: -12px;
+                    //     margin: 0 auto;
+                    // }
+                    .dayNo {
+                        color: #263238;
+                        font-size: 16px;
+                        display: block;
+                        margin-bottom: 2px;
+                    }
+                    .dateNo {
+                        color: #939596;
+                        display: block;
+                        font-size: 12px;
+                    }
+                }
+                &:hover,
+                &.active {
+                    a {
+                        background: #263238;
+                        .dayNo {
+                            color: #fff;
+                        }
+                        &:before {
+                            border-color: transparent transparent #263238;
+                        }
+                        &:after {
+                            margin-top: 1px;
+                            border-color: transparent transparent #fff;
+                        }
+                        &:after,
+                        &:before {
+                            content: "";
+                            border-style: solid;
+                            border-width: 10px;
+                            width: 0;
+                            height: 0;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: -12px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                &.addDay {
+                    a {
+                        color: #263238;
+                        font-size: 32px;
+                    }
+                    &:hover a {
+                        cursor: pointer;
+                        opacity: 0.8;
+                        background: transparent !important;
+                    }
+                }
+            }
+        }
+        
+        .customPrevNextbtn {
+            position: absolute;
+            background: #e2a10f;
+            border-radius: 20px;
+            padding: 3px 9px;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .customNextBtn {
+            top: 25px;
+            right: 4px;
+        }
+        .customPrevBtn {
+            top: 25px;
+            left: 4px;
+        }
+
+    }
+}

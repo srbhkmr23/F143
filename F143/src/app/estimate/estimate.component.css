@@ -1,0 +1,37 @@
+.linkSendBtn {
+    /* background: #123261; */
+    background: #6d8287;
+    color: #fff;
+  }
+  .linkSendBtn:hover,
+  .linkSendBtn:focus {
+    color: #fff;
+    text-decoration: none;
+    background: #ff6300;
+    /* background: #274b7f; */
+    outline: none;
+  }
+
+  .astrickStyle {
+    color:#f91212 ;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: black;
+  }
+
+  .headRow{
+    color: #ffffff;
+    background-color: #627c82;
+
+}
+
+.total{
+  font-size: 23px;
+  font-family: auto;
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 10px;
+}

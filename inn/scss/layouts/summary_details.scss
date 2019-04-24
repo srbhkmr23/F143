@@ -1,0 +1,176 @@
+.e-cWrapper{
+	padding: 40px 0;
+}
+.e-cContainer{
+	padding: 50px 0 10px;
+}
+
+
+/*============ ScheduleDetails Scss Start ============*/ 
+.sDetails-sec {
+	background: #fff;
+	position: relative;
+	 .ico-arrowIncircle{
+		position: absolute;
+		top:35px;
+		left: 10px;
+		width:30px;
+		height: 30px;;
+		cursor: pointer;
+		svg {
+			fill:#263238;
+			width:100%;
+			height:100%
+		}
+	 }
+	.agendaTimeline {
+		padding: 20px 20px 20px 50px;
+		.timelineContent {
+			border:0;
+			padding: 0;
+			.timelineDataList {
+				position: relative;
+				&:before {
+					content: "";
+					width: 18px;
+					height: 18px;
+					border-radius: 50%;
+					background: #edae0e;
+					position: absolute;
+					top: 0px;
+					left: 67px;
+				}
+				li {
+					position: relative;
+   					padding-left: 120px;
+					&:before {
+						display: none;
+					}
+					&:after {
+						content: "";
+						width: 2px;
+						height: 100%;
+						background: #edae0e;
+						position: absolute;
+						top: 22px;
+						left: 75px
+					}
+					.timeForAddedSummary{
+						position: absolute;
+						top: -5px;
+						left: 12px;
+						font-size: 15px;
+						text-align: right;
+						background: #fff;
+						padding: 2px;
+						z-index: 1;
+						color: #939596;
+						span {
+							display: block;
+						}
+					}
+					.keynoteText {
+						border-left: 0;
+						padding: 0;
+						background: transparent;
+						position: relative;
+						min-height: auto;
+						p {							
+						  font-weight: 500;
+						}
+					}
+					.client-profile-div {
+						padding: 5px 0px 5px 0px;
+						.agendaUserIcon {
+							img {
+								width: 100%;
+								height: 100%;
+								border-radius: 50%;
+							}
+						}
+						.clientDetails {
+							.topicName {
+								color: #edae0e;
+								margin-bottom: 0;
+								font-weight: 500;
+								position: relative;
+								padding: 0px 60px 0px 0px;
+    							text-align: justify;
+							}
+							.client-name {
+								color: #263238;
+								font-weight: 500;
+								text-transform: uppercase;
+								line-height: normal;
+							}
+							.client-position {
+								line-height: normal;
+								margin-bottom: 2px !important;
+							}
+							.client-institute {
+								color: #939596;
+								font-size: 12px;
+								font-weight: 500;
+								margin-bottom: 2px;
+								line-height: normal;
+							}
+							.clientDescription p {
+								color: #263238;
+								font-weight: 400;
+								font-size: 13px;
+								line-height: normal;
+							}
+						}
+						.actionBtn {
+							position: absolute;
+							right: 0;
+							top: 0px;
+							text-align: right;
+							.client-time{
+								color:#939596;
+								font-size: 14px;
+								margin-bottom: 0px;
+							}
+						}
+					}
+					&:last-child:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+/*============ ScheduleDetails Scss Start ============*/ 
+
+/*============ @ Media Query ============*/ 
+@media only screen and (max-width:767px) {
+	.sDetails-sec {
+		.agendaTimeline {
+			.timelineContent {
+				.timelineDataList {
+					position: relative;
+					&:before {
+						content: "";
+						left: 7px;
+					}
+					li {
+						position: relative;
+						padding-left: 60px;
+						&:before {
+							display: none;
+						}
+						&:after {
+							content: "";
+							left: 16px
+						}
+						.timeForAddedSummary{
+							left: -32px;
+    						font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

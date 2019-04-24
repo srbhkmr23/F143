@@ -1,0 +1,295 @@
+//==================  signup datepicker ============ //
+.cls-dob-datepicker {
+    .md-dialog {
+        zoom: 0.75;
+    }
+    .md-picker-content {
+        width: auto !important;
+        height: auto !important;
+        min-height: 300px !important;
+        max-height: 350px !important;
+        .md-calendar-header {
+            .md-calendar-controls {
+                height:50px;
+                .md-title {
+
+                }
+            }
+            .md-calendar-dows {
+                .md-calendar-dow {
+                    font-size: 16px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .md-calendar-month {
+            .md-calendar-date {
+                .md-calendar-date--date {
+                    top:10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .md-text--disabled {
+        span {
+             color:rgba(0,0,0,0.38) !important;
+             cursor: default;
+        }
+    }
+    .md-dialog-content {
+        //max-height: 410px !important;
+        overflow: hidden !important;
+    }
+}
+
+@media only screen and (max-width: 949px) {
+    .cls-dob-datepicker {
+        .md-calendar-month {
+            .md-calendar-date {
+                .md-calendar-date--date {
+                    top:14px !important;
+                    left: 10px !important;
+                }
+            }
+        }
+    }
+}
+
+//==================  edit profile datepicker ============ //
+.cls-edit-dob-datepicker {
+    .md-dialog {
+        zoom: 0.75;
+    }
+    .md-picker-content {
+        width: auto !important;
+        height: auto !important;
+        min-height: 300px !important;
+        max-height: 350px !important;
+        .md-calendar-header {
+            .md-calendar-controls {
+                height:50px;
+                .md-title {
+
+                }
+            }
+            .md-calendar-dows {
+                .md-calendar-dow {
+                    font-size: 16px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .md-calendar-month {
+            .md-calendar-date {
+                .md-calendar-date--date {
+                    top:1px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .md-dialog-content {
+        //max-height: 410px !important;
+        overflow: hidden !important;
+    }
+}
+@media only screen and (max-width: 949px) {
+    .cls-edit-dob-datepicker  {
+        .md-calendar-month {
+            .md-calendar-date {
+                .md-calendar-date--date {
+                    top:1px !important;
+                    left: 1px !important;
+                }
+            }
+        }
+    }
+}
+
+//==================  add event datepicker ============ //
+.cls-add-event-datepicker {
+    .md-dialog {
+        zoom: 0.75;
+    }
+    .md-picker-content {
+        width: auto !important;
+        height: auto !important;
+        min-height: 300px !important;
+        max-height: 350px !important;
+        .md-calendar-header {
+            .md-calendar-controls {
+                height:50px;
+                .md-title {
+
+                }
+            }
+            .md-calendar-dows {
+                .md-calendar-dow {
+                    font-size: 16px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .md-calendar-month {
+            .md-calendar-date {
+                .md-calendar-date--date {
+                    top:1px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .md-dialog-content {
+        //max-height: 410px !important;
+        overflow: hidden !important;
+    }
+}
+
+
+//==================  edit event datepicker ============ //
+.cls-edit-event-datepicker {
+    .md-dialog {
+        zoom: 0.75;
+    }
+    .md-picker-content {
+        width: auto !important;
+        height: auto !important;
+        min-height: 300px !important;
+        max-height: 350px !important;
+        .md-calendar-header {
+            .md-calendar-controls {
+                height:50px;
+                .md-title {
+
+                }
+            }
+            .md-calendar-dows {
+                .md-calendar-dow {
+                    font-size: 16px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .md-calendar-month {
+            .md-calendar-date {
+                .md-calendar-date--date {
+                    top:1px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .md-dialog-content {
+        //max-height: 410px !important;
+        overflow: hidden !important;
+    }
+}
+
+
+//==================  add agenda datepicker ============ //
+.cls-add-agenda-datepicker {
+    .md-dialog {
+        zoom: 0.75;
+    }
+    .md-picker-content {
+        width: auto !important;
+        height: auto !important;
+        min-height: 300px !important;
+        max-height: 350px !important;
+        .md-calendar-header {
+            .md-calendar-controls {
+                height:50px;
+                .md-title {
+
+                }
+            }
+            .md-calendar-dows {
+                .md-calendar-dow {
+                    font-size: 16px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .md-calendar-month {
+            .md-calendar-date {
+                .md-calendar-date--date {
+                    top:1px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .md-dialog-content {
+        //max-height: 410px !important;
+        overflow: hidden !important;
+    }
+}
+
+
+//==================  discount datepicker ============ //
+.cls-discount-datepicker {
+    .md-dialog {
+        zoom: 0.75;
+    }
+    .md-picker-content {
+        width: auto !important;
+        height: auto !important;
+        min-height: 300px !important;
+        max-height: 350px !important;
+        .md-calendar-header {
+            .md-calendar-controls {
+                height:50px;
+                .md-title {
+
+                }
+            }
+            .md-calendar-dows {
+                .md-calendar-dow {
+                    font-size: 16px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .md-calendar-month {
+            .md-calendar-date {
+                .md-calendar-date--date {
+                    top:1px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .md-dialog-content {
+        //max-height: 410px !important;
+        overflow: hidden !important;
+    }
+}
+
+/*================ Time Picker ===============*/ 
+
+.cls-add-agenda-timepicker {
+    .md-dialog-content{
+        .md-picker--time{
+            .md-picker-header {
+                background: #ffc107;
+                //padding: 8px;
+                //width: 163px;
+            }
+        }
+    }
+}
+@media (orientation: landscape) {
+    .cls-add-agenda-timepicker {
+        .md-picker {
+            display: -ms-flexbox;
+            display: flex;
+            width: 500px;
+        }
+        .md-picker .md-picker-content {
+            height: 280px;
+            width: 330px;
+        }
+    }
+}
+

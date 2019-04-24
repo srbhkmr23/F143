@@ -1,0 +1,57 @@
+<div style="min-height: -webkit-fill-available;" class="container">
+
+    <form [formGroup]="estimateForm" #formDir="ngForm" action=""  autocomplete="off">
+        <div class="form-group">
+            <label for="name">From Date <span class="astrickStyle">*</span> :</label>
+              <input [owlDateTime]="dt1" class="text_color" formControlName="fromDate" [(ngModel)]="fromDate" [owlDateTimeTrigger]="dt1" class="form-control" placeholder="From Date">
+                            <owl-date-time #dt1></owl-date-time>      
+          </div>
+          <div class="form-group">
+              <label for="name">To Date <span class="astrickStyle">*</span> :</label>
+                <input [owlDateTime]="dt2" class="text_color" formControlName="toDate" [(ngModel)]="toDate" [owlDateTimeTrigger]="dt2" class="form-control" placeholder="To Date">
+                              <owl-date-time #dt2></owl-date-time>      
+          </div>
+          <div class="form-group">
+              <label for="name">Purchased by <span class="astrickStyle">*</span> :</label>
+              <input type="text" trim formControlName="purchasedBy" [(ngModel)]="purchasedBy" class="form-control"
+                placeholder="Purchase by">      
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                  <a href="javascript:void(0);" type="button" class="btn btn-lg linkSendBtn" 
+                    (click)="getEstimate()">Get Estimate</a>
+                    
+                </div>
+              </div>
+    </form>
+    <br>
+    <br>
+<ng-container *ngIf = "tableShow">
+<table class="table table-striped table-bordered table-hover table-condensed">
+  <thead>
+    <tr class="headRow">
+      <th>SNo.</th>
+      <th>Item Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <ng-container  *ngFor="let item of allItems let i = index">
+    <tr style="color: #000000;">
+      <td>{{i+1}}</td>
+      <td>{{item.item_name}}</td>
+      <td>{{item.price}}</td>
+    </tr>
+  </ng-container>
+  
+  </tbody>
+</table>
+
+<div style="background-color: #627c82; width: 173px;"><p class = "total">Total: {{sum}}</p></div>
+</ng-container>
+</div> 
+
+
+
+

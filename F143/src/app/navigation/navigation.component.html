@@ -1,0 +1,25 @@
+<mat-toolbar color="warn">
+    <mat-toolbar-row style="background-color: #627c82;">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+        <mat-icon style="color:#ffffff" aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <p style="margin-left: auto;">Total: {{totalService.totalAmounts}} Rs</p>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav  #drawer mode="side" opened role="navigation">
+      <mat-nav-list>
+          <a mat-list-item routerLink='/additem' (click)="drawer.toggle()">Add items</a>
+        <a mat-list-item routerLink='/showitems' (click)="drawer.toggle()">Show items</a>
+        <a mat-list-item routerLink='/monthly_estimate' (click)="drawer.toggle()">Estimate</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
+
+  

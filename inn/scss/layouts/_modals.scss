@@ -1,0 +1,1185 @@
+
+/*========== All Modals Scss ========*/
+
+
+
+/*============= Login Alert Modal  =============*/
+.mdlBackRoot {
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    &:after {
+        content: "";
+        position: fixed;
+        left: 0;
+        right:0;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        height: 100%;
+        // display: none;
+        }
+        .loginAlertModal {
+            max-width: 350px;
+            background: #fff;
+            box-shadow: 0px 2px 10px #666;
+            border: 1px solid #ddd;
+            position: absolute;
+            right: 0;
+            top: 55px;
+            z-index: 99;
+            .title {
+                padding: 10px 24px;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+            &::after {
+                content: " ";
+                position: absolute;
+                top:-16px;
+                bottom: 100%;
+                right: 32%;
+                margin-left: -8px;
+                border-width: 8px;
+                border-style: solid;
+                border-color: transparent transparent #fff transparent;
+                z-index: 99;
+            }
+            .loginAlertModal-body {
+                padding: 0px 15px 15px 15px;
+                .form-card {
+                    .form-group {
+                        span {
+                            position: absolute;
+                            top: 8px;
+                            left: 11px;
+                            width: 20px;
+                            height: 20px;
+                            z-index: 1;
+                            svg {
+                                fill:#edae0e;
+                            }
+                        }
+                        .form-control {
+                            padding: 20px 40px 20px 40px !important;
+                            height: 50px;
+                        }
+                        &.cls-relative {
+                            .alertIcon{
+                                top: 18px !important;
+                            }
+                        }
+                        &.cls-relative {
+                            .tbCheck{
+                                top: 18px !important;
+                            }
+                        }
+                    }
+                }
+                .footer-btn {
+                    padding: 0px 0 0px;
+                    .btn-dark{
+                        padding: 10px 35px;
+                    }
+                }
+            }
+            .loginAlertfooter {
+                border-top:1px solid #ddd !important;
+                text-align: center;
+                margin: 0;
+                padding: 15px 15px;
+                justify-content: center;
+                font-size: 14px;
+                line-height: 1;
+                .newUserText {
+                    cursor: pointer;
+                }
+                .registerText {
+                    color: #000;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+        }
+}
+@media only screen and (max-width:767px) {
+    .mdlBackRoot {
+        .loginAlertModal  {
+            top:40px;
+            &:after {
+                right: 20%;
+            }
+            .loginAlertModal-body {
+                .form-group {
+                    span {
+                        top:16px !important;
+                    }
+                }
+                .footer-btn {
+                    padding: 0px 0 0px;
+                    .btn-dark {
+                        padding: 5px 30px;
+                    }
+                    .textSpan {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*========== changePwdModal ===========*/
+.changePwdModal {
+    .mdl-header {
+        padding: 25px;
+        h2 {
+            letter-spacing: 0.7px;
+            font-weight: 400;
+            .ico-close{
+                cursor: pointer;
+                svg {
+                    fill:#000;
+                }
+            }
+        }
+    }
+    .changePwd-body{
+        padding-bottom: 50px;
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 0px 15px;
+        }
+        .resetText {
+            color:#939596;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .form-card {
+            .form-group {
+                span {
+                    position: absolute;
+                    top: 18px;
+                    left: 11px;
+                    width: 22px;
+                    height: 22px;
+                    z-index: 1;
+                    svg {
+                        fill:#edae0e;
+                    }
+                }
+                .form-control {
+                    padding: 20px 40px 20px 40px !important;
+                }
+            }
+        }
+        .securityImg {
+            margin-top: 35px;
+            img { 
+                width:100%;
+            }
+        }
+        .mdl-footer {
+            padding: 0px 15px;
+            .btnSubmit {
+                background: #edae0e;
+                border: 0;
+                border-radius: 20px;
+                color: #fff;
+                padding: 7px 20px;
+                min-width: 85px;
+                &:hover {
+                    background: #dc9f02;
+                }
+            }
+            .btnCancel {
+                padding: 7px 20px;
+                border-radius: 20px;
+                min-width: 85px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:767px) {
+    .changePwdModal {
+        .changePwd-body {
+            .securityImg {
+                margin-top: 35px;
+                img { 
+                    width:50%;
+                }
+            }
+        }
+        .mdl-footer {
+            text-align: center;
+        }
+    }
+}
+
+/*========== InterestModal ========*/
+
+.InterestModal {
+    border-radius: 0px !important;
+    .mdl-header {
+        padding: 28px 15px;
+        text-align: center;
+        border-bottom: 0 !important;
+        position: relative;
+        h2 {
+            letter-spacing: .7px;
+            font-weight: 400;
+            .ico-close{
+                cursor: pointer;
+                position: absolute;
+                top: 8px;
+                right: 15px;
+                svg {
+                    fill:#000;
+                }
+            }
+        }
+        .headCheck {
+            position: absolute;
+            bottom: -4px;
+            right: 15px;
+            margin-bottom: 0;
+        }
+    }
+    .mdl-body {
+        padding: 0px 0;
+        overflow-y: initial;
+        /*background: #f2f2f2;*/
+        .panel-group {
+            .panel+.panel {
+                margin-top: 15px;
+            }
+            .panel {
+                border-radius: 0;
+                border: 0;
+                .panel-heading {
+                    background: #f2f2f2;
+                    .panel-title {
+                        font-weight: 600;
+                        font-size: 16px;
+                        padding: 2px 0;
+                        margin: 0;
+                    }
+                }
+                .panel-content {
+                    .panel-body {
+                        border-top: 0;
+                        .chooseStudy {
+                            /*padding: 15px;*/
+                            background: #fff;
+                            .checkbox-custom-label {
+                                position: relative;
+                                padding-left: 30px;
+                            }
+                            .custom-checkbox {
+                                opacity: 0;
+                                position: absolute;
+                                display: inline-block;
+                                vertical-align: middle;
+                                cursor: pointer;
+                            }
+                            .checkbox-custom-label {
+                                display: inline-block;
+                                vertical-align: middle;
+                                cursor: pointer;
+                                margin-bottom: 15px;
+                            }
+                            .custom-checkbox {
+                                +.checkbox-custom-label:before {
+                                    content: '';
+                                    width: 20px;
+                                    height: 20px;
+                                    background: #ddd;
+                                    border: 0;
+                                    border-radius: 50%;
+                                    /*border: 2px solid #000;*/
+                                    vertical-align: middle;
+                                    display: inline-block;
+                                    margin-right: 10px;
+                                    text-align: center;
+                                    position: absolute;
+                                    top: -1px;
+                                    left: 0;
+                                }
+                                &:checked+.checkbox-custom-label:before {
+                                    background: #edae0e;
+                                    /* border: 2px solid green;*/
+                                }
+                            }
+                        }
+                    }
+                }
+                .btnAdd {
+                    font-size: 16px;
+                    padding: 10px 20px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    border-radius: 0;
+                    color: #fff;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+                .formcategoryDiv {
+                    .form-group {
+                        .form-control {
+                            background: #e9eaeb;
+                            border: 0;
+                            -webkit-box-shadow: none;
+                            box-shadow: none;
+                            border-radius: 0;
+                            height: 40px;
+                            &:focus {
+                                outline: 0;
+                            }
+                        }
+                    }
+                    .subcategoriesLink {
+                        color: #04b42e;
+                        text-decoration: none;
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .mdl-footer {
+        padding: 35px 15px;
+        text-align: center !important;
+        border-top: 0 !important;
+        justify-content: center; 
+        .btnCancel {
+            border-radius: 4px;
+            padding: 15px 25px;
+        }
+        .btnSave {
+            background: #2db2dd;
+            border-radius: 4px;
+            padding: 15px 30px;
+            min-width: 65px;
+            &:hover {
+                background: #05a5d8;
+            }
+        }
+    }
+}
+
+/*========== alertModal  ===========*/
+.alertModal {
+    max-width: 400px;
+    .modal-header {
+        padding: 12px;
+        border-bottom: 0px;
+        text-align: right;
+        .ico-close {
+            cursor: pointer;
+            svg {
+                fill:#000 !important;
+            }
+        }
+    }
+    .modal-body {
+        padding: 0px 15px;
+        .mdlContent {
+            text-align: center;
+            .mdl-BgDesign {
+                background: #f4f3f3;
+                position: absolute;
+                top: -10px;
+                left: 0;
+                right: 0;
+                height: 95px;
+                border-radius: 0 0 60% 60%;
+            }
+            .deleteIconDiv {
+                background: #d16f70;
+                width:90px;
+                height:90px;
+                padding: 15px 10px;
+                border-radius: 50%;
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 25px;
+                .ico-delete {
+                    width:60px;
+                    height: 60px;
+                    svg {
+                        fill: #fff;
+                        width:100%;
+                        height:100%;
+                    }
+                }
+            }
+            h4 {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .modal-footer{
+        text-align: center;
+        border-top: 0px;
+        .btnDelete {
+            border-radius: 20px;
+            background: #edae0e;
+            min-width: 85px;
+            &:hover, &:focus{
+                background: #cf9502;
+            }
+        }
+        .btnCancel {
+            border-radius: 20px;
+            min-width: 85px;
+        }
+    }
+}
+
+/*========== editEventModal  ===========*/
+
+.bg-delete {
+    background: #d16f70;
+}
+.bg-publish {
+    background: #45b4fc;
+}
+.bg-alert {
+    background: #a03a3b;
+}
+
+.editEventModal {
+    .MuiDialog-paperWidthMd-5 {
+        width:450px;
+        .editEventModal-body {
+            padding: 24px 24px 24px 24px;
+            .ico-close {
+                cursor: pointer;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                z-index: 9;
+                svg {
+                    fill:#000;
+                }
+            }
+            .mdl-BgDesign {
+                position: absolute;
+                top: -10px;
+                left: 0;
+                right: 0;
+                height: 95px;
+            }
+            .mdlContent {
+                text-align: center;
+                position: relative;
+                .publishIconDiv {
+                    background: #45b4fc;
+                    width: 90px;
+                    height: 90px;
+                    padding: 20px 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    margin-bottom: 25px;
+                    box-shadow: 0px 0px 2px 7px #fff;
+                    .ico-publish {
+                        width:50px;
+                        height: 50px;
+                        svg {
+                            fill: #fff;
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                }
+                .deleteIconDiv {
+                    background: #d16f70;
+                    width:90px;
+                    height:90px;
+                    padding: 15px 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    margin-bottom: 25px;
+                    box-shadow: 0px 0px 2px 7px #fff;
+                    .ico-delete {
+                        width:50px;
+                        height: 60px;
+                        svg {
+                            fill: #fff;
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                }
+                .envelopIconDiv {
+                    background: #d16f70;
+                    width:90px;
+                    height:90px;
+                    padding: 15px 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    margin-bottom: 25px;
+                    box-shadow: 0px 0px 2px 7px #fff;
+                    .ico-envelop {
+                        width:40px;
+                        height: 60px;
+                        svg {
+                            fill: #fff;
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                }
+                .alertIconDiv {
+                    background: #a03a3b;
+                    width:90px;
+                    height:90px;
+                    padding: 15px 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    margin-bottom: 25px;
+                    box-shadow: 0px 0px 2px 7px #fff;
+                    .ico-alert {
+                        width:55px;
+                        height: 55px;
+                        svg {
+                            fill: #fff;
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                }
+                h4 {
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                }
+            }
+            .mdl-footer {
+                text-align: center;
+                padding: 0px 15px;
+                .btnSubmit {
+                    background: #edae0e;
+                    border: 0;
+                    border-radius: 20px;
+                    color: #fff;
+                    padding: 7px 28px;
+                    min-width: 85px;
+                    &:hover {
+                        background: #dc9f02;
+                    }
+                }
+                .btnCancel {
+                    padding: 7px 28px;
+                    min-width: 75px;
+                    border-radius: 20px;
+                    min-width: 85px;
+                }
+            }
+        }
+    }
+}
+
+
+/*========== agendaDetailsModal ===========*/
+.agendaDetailsModal {
+    border-radius: 0px;
+    .mdl-header {
+        padding: 25px;
+        text-align: center;
+        border-bottom:1px solid #ddd !important;
+        h2 {
+            letter-spacing: 0.7px;
+            font-weight: 400;
+            .ico-close{
+                cursor: pointer;
+                svg {
+                    fill:#000;
+                }
+            }
+        }
+    }
+    .mdl-body {
+        padding:24px 24px 24px 24px;
+        .agendaTimeline {
+            padding: 0;
+            .timelineContent {
+                border: 0;
+                padding: 30px 0px 0px 0px;
+                .timelineDataList {
+                    li {
+                        padding-left: 70px;
+                        .timeForAddedSummary {
+                            left: -10px;
+                        }
+                        .client-profile-div {
+                            .agendaUserIcon {
+                                left:-80px;
+                            }
+                        }
+                        .agendaSpeakerDetails {
+                            .checkBtn {
+                                left:-75px;
+                            }
+                        }
+                        .oneMoreAgendaSpeakerDetails {
+                            .addPlusBtn {
+                                left:-64px;
+                            }
+                        }
+                        .agendaSummeryField {
+                            padding-right: 60px;
+                            .cancleIconTag {
+                                right: 5px;
+                            }
+                        }
+                        &:before {
+                            left: 11px;
+                        }
+                        &:after {
+                            left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mdl-footer {
+        padding: 35px 15px;
+        text-align: center !important;
+        border-top: 0 !important;
+        justify-content: center; 
+        .btnCancel {
+            border-radius: 4px;
+            padding: 15px 25px;
+        }
+        .btnSave {
+            background: #2db2dd;
+            border-radius: 4px;
+            padding: 15px 30px;
+            min-width: 65px;
+            &:hover {
+                background: #05a5d8;
+            }
+        }
+    }
+
+}
+
+/*============= Modal Calender Event =============*/
+.calendarEventModal {
+    .mdl-header {
+        padding: 30px 20px 15px;
+        .ico-close {
+            cursor: pointer;
+            svg {
+                fill:#000 !important;
+            }
+        }
+        h2 {
+            padding-bottom: 12px;
+            border-bottom:1px solid #ddd;
+        }
+    }
+    .mdl-body {
+        padding-bottom: 50px;
+        .evSec {
+            .col-sm-8 {
+                padding-left: 0;
+            }
+            .c-Ev-img {
+                max-width: 165px; 
+                height: 90px;
+                margin: 10px auto;
+                img {
+                    width:100%;
+                    height: 100%;
+                }
+            }
+            .c-Ev-text-wrap {
+                padding: 35px 0px;
+                border-bottom: 1px solid #ddd;
+                .ev-Content {
+                    //max-height: 100px;
+                    height: 50px;
+                    overflow: hidden;
+                    h4 {
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        color:#838383;
+                        margin-bottom: 0;
+                    }
+                    p {
+                        margin-bottom: 0;
+                        span {
+                            color: #928a8a;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .calendarEventModal {
+        .mdl-body {
+            .evSec {
+                .col-sm-8 {
+                    padding-left: 15px;
+                }
+                .c-Ev-img {
+                    max-width: 140px; 
+                }
+                .c-Ev-text-wrap {
+                    padding: 0px 0 15px;
+                }
+            }
+        }
+    }
+}
+
+/*============= Discount Modal =============*/
+.discountModal {
+    .mdl-header {
+        padding: 15px;
+        border-bottom: 0px;
+        .ico-close {
+            cursor: pointer;
+            svg {
+                fill:#000 !important;
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+    .mdl-body {
+        padding: 20px 25px;
+        .mdlContent {
+            .discount-sec {
+                height: auto !important;
+                .eb-Discount {
+                    .eb-text {
+                        span {
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 8px;
+                            svg {
+                                fill:#edae0e !important;
+                            }
+                        }
+                    }
+                    .eb-RegisterText {
+                        color: #263238;
+                        overflow: hidden;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*============= Terms And Condition Modal =============*/
+.termsAndCondition_Modal {
+    .mdl-header {
+        background: #263238;
+        padding: 30px 30px;
+        border-bottom: 0px;
+        h2 {
+            color:#fff;
+            font-weight: 400;
+        }
+        .ico-close {
+            cursor: pointer;
+            svg {
+                fill:#fff !important;
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+    .mdl-body {
+        padding: 30px 25px;
+        .tnC_content {
+            //height: 450px;
+            //overflow-x: auto;
+            ol {
+                li {
+                    margin-bottom: 3px;
+                }
+            }
+        }
+        & ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+        & ::-webkit-scrollbar {
+            width: 4px;
+            background-color: #F5F5F5;
+        }
+        & ::-webkit-scrollbar-thumb {
+            background-color: #263238;
+            border: 2px solid #555555;
+        }
+    }
+}
+
+/*============= Modal Edit Profile =============*/
+.profileEditModal {
+    .modal-header {
+      padding: 20px 15px;
+      .ico-close {
+          svg {
+              fill:#000 !important;
+          }
+      }
+  }
+  .modal-body {
+      padding: 0px 0px 40px;
+      .btnSave {
+        background: #2db2dd;
+        border-radius: 4px;
+        padding: 15px 30px;
+        min-width: 65px;
+        &:hover {
+            background: #05a5d8;
+        }
+    }
+    .probannerBg {
+        position: relative;
+        background: url("../../src/img/probg.jpg") no-repeat;
+        background-size: cover;
+        height: 225px;
+    }
+    .editProfile-Sec {
+        padding: 20px 40px;
+        margin-top: -105px;
+        .editProfileImg {
+          background: #263238;
+          border: 2px solid #fff;
+          width: 150px;
+          height: 150px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+          border-radius: 50%;
+          position: relative;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .editIcon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            background: #263236;
+            padding: 4px 5px;
+            border-radius: 20px;
+            .ico-pen {
+                width:16px;
+                height:16px;
+                svg {
+                    fill:#fff;
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+    }
+    .maleFemaleBtn {
+        margin-bottom: 0;
+        height: 60px;
+        background: #ddd;
+        svg {
+            width: 30px;
+            fill: #939596;
+            height: 30px;
+            position: absolute;
+            top: 4px;
+            left: 35px;
+        }
+        label {
+            font-weight: normal;
+            -webkit-user-select: none;
+                /* Safari 3.1+ */
+                -moz-user-select: none;
+                /* Firefox 2+ */
+                -ms-user-select: none;
+                /* IE 10+ */
+                user-select: none;
+                /* Standard syntax */
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: 0;
+                padding-left: 70px;
+                padding-top: 10px;
+                z-index: 2;
+            }
+            [type='radio'] {
+                +label:before {
+                    display: none;
+                }
+                &:checked {
+                    ~svg {
+                        fill: #263238;
+                    }
+                    +label {
+                        color: #263238;
+                    }
+                }
+                position: absolute;
+                left: 0;
+                opacity: 0;
+            }
+            .male, .female {
+                position: relative;
+                padding-left: 30px;
+                position: relative;
+                color: #263238;
+                padding-top: 6px;
+                padding: 6px 20px 10px 30px;
+                width: 50%;
+            }
+            & .male {
+                border-right: 1px solid #fff;
+            }
+        }
+        .Select-control {
+            height:60px;
+            background: #e9eaeb;
+            padding: 10px 25px 10px 15px;
+            position: relative;
+            border: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-radius: 0;
+            .Select-placeholder {
+                top: 12px;
+            }
+            .Select-value {
+                top: 12px;
+            }
+        }
+        .geosuggest {
+            .geosuggest__suggests-wrapper {
+                position: absolute;
+                top: 86px;
+                .geosuggest__suggests {
+                    .geosuggest__item {
+                        background: #e9eaeb;
+                        &:hover {
+                            background: #edae0e !important;
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .subscribSettingDiv {
+        .panel {
+          border:0;
+          .panel-heading {
+            padding: 4px 40px;
+            color: #939596;
+            background-color: #e9eaeb;
+            cursor: pointer;
+            .ico-rightarrow {
+                width: 25px;
+                height: 15px;
+                -webkit-transform: rotate(88deg);
+                -ms-transform: rotate(88deg);
+                transform: rotate(88deg);
+                svg {
+                    fill:#939596;
+                }
+            }
+            .panel-title {
+                text-transform: uppercase;
+            }
+        }
+        .panel-body {
+            padding: 20px 40px 0px;
+            border-top:0 !important;
+            .reUnsubscribText {
+              margin-bottom: 20px;
+              span {
+                  font-size: 12px;
+                  font-weight: 500;
+              }
+              .btnSubscribe {
+                padding: 2px 18px;
+                // &:hover, &:focus {
+                //   background: #edae0e;
+                //   color: #fff;
+                // }
+            }
+            & .active {
+                background: #edae0e;
+                color: #fff;
+            }
+        }
+    }
+  }
+}
+}
+}
+// @media Query 
+@media only screen and (max-width: 991px) {
+    .profileEditModal {
+        .modal-body {
+            .editProfile-Sec {
+                .maleFemaleBtn {
+                    svg {
+                        left: 5px;
+                    }
+                    label {
+                        padding-left: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @media Query 
+@media only screen and (max-width: 1024px) {
+    .profileEditModal .modal-body .probannerBg {
+        height: 150px;
+    }
+}
+
+/*========== Image CropperModal ===========*/
+.imageCropperModal {
+    .mdl-header {
+        padding: 20px 20px;
+        h2 {
+            letter-spacing: 0.7px;
+            font-weight: 400;
+            .ico-close{
+                cursor: pointer;
+                svg {
+                    fill:#000;
+                }
+            }
+        }
+    }
+    .imageCropper-body{
+        padding-bottom: 20px;
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 0px 15px;
+        }
+        .mdl-footer {
+            padding: 20px 0px 0px;
+            text-align: center;
+            .btnSubmit {
+                background: #edae0e;
+                border: 0;
+                border-radius: 20px;
+                color: #fff;
+                padding: 7px 20px;
+                min-width: 85px;
+                &:hover {
+                    background: #dc9f02;
+                }
+            }
+            .btnCancel {
+                padding: 7px 20px;
+                border-radius: 20px;
+                min-width: 85px;
+            }
+        }
+    }
+}
+// &.imagePreviewModal {
+//     .mdl-body {
+//         padding: 0px 24px 24px 24px !important;
+//     }
+// }
+
+
+@media only screen and (max-width:767px) {
+    .imageCropperModal {
+        .changePwd-body {
+        }
+        .mdl-footer {
+            text-align: center;
+        }
+    }
+}
+
+/*========== Image Preview Modal ===========*/
+.imagePreviewModal {
+    .mdl-header {
+        padding: 20px 20px;
+        h2 {
+            letter-spacing: 0.7px;
+            font-weight: 400;
+            .ico-close{
+                cursor: pointer;
+                svg {
+                    fill:#000;
+                }
+            }
+        }
+    }
+    .mdl-body{
+        padding: 0px 24px 24px 24px !important;
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 0px 15px;
+        }
+        .mdl-footer {
+            padding: 20px 0px 0px;
+            text-align: center;
+            .btnSubmit {
+                background: #edae0e;
+                border: 0;
+                border-radius: 20px;
+                color: #fff;
+                padding: 7px 20px;
+                min-width: 85px;
+                &:hover {
+                    background: #dc9f02;
+                }
+            }
+            .btnCancel {
+                padding: 7px 20px;
+                border-radius: 20px;
+                min-width: 85px;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<html>
+  <body>
+    
+    <div class="container" style="min-height: -webkit-fill-available; min-width: -webkit-fill-available;">
+      <form [formGroup]="addItemForm" #formDir="ngForm" action="" novalidate autocomplete="off">
+        <div class="form-content">
+          <div class="form-group">
+            <label for="name">Item Name <span class="astrickStyle">*</span> :</label>
+            <input type="text" trim formControlName="itemName" [(ngModel)]="itemName" [ngClass]="{'error': !itemNameValid && itemNameForm}"
+              (keydown)="removeErrorClass('itemName')" (focusout)="removeErrorClass('itemName')" class="form-control"
+              placeholder="Item Name">       
+          </div>
+          <div class="form-group">
+            <label for="name">Qty <span class="astrickStyle">*</span> :</label>
+            <input type="text" trim formControlName="Qty" [(ngModel)]="Qty" [ngClass]="{'error': !QtyValid && QtyForm}"
+              (keydown)="removeErrorClass('Qty')" (focusout)="removeErrorClass('Qty')" class="form-control"
+              placeholder="Quantity">      
+          </div>
+          <div class="form-group">
+            <label for="name">Price <span class="astrickStyle">*</span> :</label>
+            <input type="text" trim formControlName="Price" [(ngModel)]="Price" [ngClass]="{'error': !PriceValid && PriceForm}"
+              (keydown)="removeErrorClass('Price')" (focusout)="removeErrorClass('Price')" class="form-control"
+              placeholder="Price">        
+          </div>
+          <div class="form-group">
+            <label for="name">Purchase Date <span class="astrickStyle">*</span> :</label>
+              <input [owlDateTime]="dt1" class="text_color" formControlName="purchaseDate" [(ngModel)]="purchaseDate" [owlDateTimeTrigger]="dt1" [ngClass]="{'error': !purchaseDateValid && purchaseDateForm}"
+              (keydown)="removeErrorClass('purchaseDate')" (focusout)="removeErrorClass('purchaseDate')" class="form-control" placeholder="Date Time">
+                            <owl-date-time #dt1></owl-date-time>      
+          </div>
+          <div class="form-group">
+            <label for="name">Purchased by <span class="astrickStyle">*</span> :</label>
+            <input type="text" trim formControlName="purchasedBy" [(ngModel)]="purchasedBy" [ngClass]="{'error': !purchasedByValid && purchasedByForm}"
+              (keydown)="removeErrorClass('purchasedBy')" (focusout)="removeErrorClass('purchasedBy')" class="form-control"
+              placeholder="Purchase by">      
+          </div>
+        </div>
+      </form>
+      <div class="row">
+          <div class="col-sm-12 text-center">
+            <a href="javascript:void(0);" type="button" class="btn btn-lg linkSendBtn" 
+              (click)="submitItem()">Add item</a>
+              
+          </div>
+        </div>
+    </div>
+
+
+    
+   
+  </body>
+</html>

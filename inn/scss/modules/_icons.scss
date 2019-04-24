@@ -1,0 +1,274 @@
+[class^="ico-"] {
+  display: inline-block;
+  vertical-align: middle;
+  svg {
+    // width: 100%;
+    pointer-events: none;
+  }
+}
+
+.ico-search {
+  width: 30px;
+  height: 30px;
+  svg {
+    width: 100%;
+    height: 100%;
+    fill:$white-color;
+   
+  }
+}
+.ico-lock {
+    width: 25px;
+    height: 25px;
+  svg {
+    width: 100%;
+    height: 100%;
+   
+  }
+}
+
+.ico-user{
+   width: 25px;
+    height: 25px;
+  svg {
+    width: 100%;
+    height: 100%;
+   
+  }
+}
+
+.ico-mobile {
+  width: 25px;
+  height: 25px;
+  svg {
+    width: 100%;
+    height: 100%;
+    fill:$text-dark;
+  }
+}
+
+.ico-envelop {
+  width: 25px;
+  height: 25px;
+  svg {
+    width: 100%;
+    height: 100%;
+   fill:$text-dark;
+  }
+}
+
+.ico-briefcase {
+  width: 25px;
+  height: 25px;
+  svg {
+    width: 100%;
+    height: 100%;
+   fill:$text-dark;
+  }
+}
+.ico-interest {
+  width: 25px;
+  height: 25px;
+  svg {
+    width: 100%;
+    height: 100%;
+   fill:$text-dark;
+  }
+}
+
+.ico-building {
+  width: 25px;
+  height: 25px;
+  svg {
+    width: 100%;
+    height: 100%;
+   fill:$text-dark;
+  }
+}
+
+.ico-calander {
+  width: 25px;
+  height: 25px;
+  svg {
+    width: 100%;
+    height: 100%;
+   fill:$text-dark;
+  }
+}
+
+.ico-map-pin {
+    width: 25px;
+    height: 25px;
+  svg {
+    width: 100%;
+    height: 100%;
+    fill:$text-dark;
+   
+  }
+}
+
+.ico-r-arrow {
+  width: 30px;
+  height: 30px;
+  svg {
+    width: 100%;
+    height: 100%;
+    fill:#000;
+   
+  }
+}
+
+.ico-d-carter {
+  width: 30px;
+  height: 30px;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.ico-rightarrow {
+  width: 20px;
+  height: 20px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.ico-correctIco {
+  width: 20px;
+  height: 20px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.ico-correctboldIco {
+  width: 25px;
+  height: 25px;
+  fill:#37b546;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.ico-crossboldIco {
+  width: 25px;
+  height: 25px;
+   fill:#b53737;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ico-cancle {
+  width: 20px;
+  height: 20px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.ico-delete{
+    width: 34px;
+    height: 34px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill:#ccc;
+  }
+}
+.ico-arrow{
+  width: 28px;
+  height: 32px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill:#3bae3b;
+  }
+}
+.ico-tag {
+  width: 16px;
+  height: 16px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.ico-o-mobile {
+  width: 100px;
+  height: 100px;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.ico-c-card{
+  width: 100px;
+  height: 100px;
+  svg {
+    width: 100%;
+    height: 100%;
+    
+  }
+}
+.ico-f-search {
+  width: 100px;
+  height: 100px;
+  svg {
+    width: 100%;
+    height: 100%;
+   
+  }
+}
+.ico-connect {
+  width: 100px;
+  height: 100px;
+  svg {
+    width: 100%;
+    height: 100%;
+   
+  }
+}
+.ico-close {
+  width: 20px;
+  height: 20px;
+  svg {
+    width: 100%;
+    height: 100%;
+   
+  }
+}
+
+// css arrow
+i.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0 !important;
+  display: inline-block;
+  padding: 3px;
+  &.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  &.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  &.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  &.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+}

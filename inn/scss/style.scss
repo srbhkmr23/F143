@@ -1,0 +1,81 @@
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+
+@import 'mixins/_vendor.scss';
+@import 'mixins/_position.scss';
+
+//----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
+
+// Config modules
+@import 'modules/_vars.scss';
+@import 'modules/_clearfix.scss';
+@import 'modules/_normalize.scss';
+@import 'modules/_defaults.scss';
+
+//----------------------------------*\
+// PARTIALS
+//----------------------------------*/
+
+@import 'partials/_header.scss';
+@import 'partials/_nav.scss';
+@import 'partials/_sidebar.scss';
+@import 'partials/_main.scss';
+@import 'partials/_footer.scss';
+
+//----------------------------------*\
+// OBJECTS & MODULES
+//----------------------------------*/
+
+@import 'modules/_buttons.scss';
+@import 'modules/_inputs.scss';
+@import 'modules/_lists.scss';
+@import 'modules/_typography.scss';
+@import 'modules/_misc.scss';
+@import 'modules/fonts';
+@import 'modules/_app.scss';
+@import 'modules/icons';
+
+// Enhancement modules
+@import 'modules/_breakpoints.scss';
+@import 'modules/_print.scss';
+
+//----------------------------------*\
+// VENDOR
+//----------------------------------*/
+
+@import 'vendor/_external.scss';
+
+//----------------------------------*\
+// Custom Css
+//----------------------------------*/
+
+@import 'modules.scss';
+@import 'custom-style/main.scss';
+@import 'layouts/commonModules';
+@import 'layouts/landing';
+@import 'layouts/signup';
+@import 'layouts/event_view';
+@import 'layouts/pricing';
+@import 'layouts/summary_details.scss';
+@import 'layouts/eventNotificationHeader.scss';
+@import 'layouts/leftsidebar.scss';
+@import 'layouts/invitation';
+@import 'layouts/joint_event';
+@import 'layouts/joint_event_payment';
+@import 'layouts/design';
+@import 'layouts/custom_toaster';
+@import 'layouts/ripple.scss';
+@import 'layouts/locationPicker.scss';
+@import 'layouts/calender.scss';
+@import 'layouts/_modals.scss';
+@import 'layouts/selectionList.scss';
+@import 'layouts/datepicker.scss';
+@import 'layouts/owlcarousel2.scss';
+
+@import 'layouts/discount.scss';
+//--------------*/
+@import 'dashboard.scss';
+@import 'layouts/loader.scss';
